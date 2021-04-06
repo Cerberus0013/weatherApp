@@ -1,0 +1,43 @@
+* {
+    box-sizing: border-box;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+
+
+
+
+.card {
+  margin: 0 0 20px 0;
+  border: 3px solid blue;
+  background-color: blanchedalmond;
+  
+}
+
+.card-header {
+  color: red;
+  background-color: grey ; 
+  padding: 2.5%;
+
+}
+
+.card-body {
+  padding: 2.5%;
+}
+
+.btn {
+    border-radius: 10px;
+}
+.btn:hover {
+  background-color: greenyellow;
+  box-shadow: 2px 2px black;
+}
+
+.form-input {
+  width: 100%;
+  padding: 3%;
+  margin: 5px 0;
+  font-size: 1.2rem;
+  border: 2px solid black;
+  border-radius: 10px;
+}
+

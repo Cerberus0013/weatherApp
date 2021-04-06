@@ -1,9 +1,15 @@
 
-const searchInputEl = document.getElementById('citySearch')
 
+const fromEl = document.querySelector('#user-form')
+const searchInputEl = document.querySelector('#citySearch')
 
+//added submit button function to ccapture input
+const submitButton  =function (e){
+    e.preventDefault()
+    console.log(e)
+}
 
-//searchInputEl = document.addEventListener('submit', function(){
+fromEl.addEventListener("submit", submitButton)
 
 
 const weatherByCity = function (searchInput) {
