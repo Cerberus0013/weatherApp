@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/style.css">
     <title>Weather On-Demnd</title>
 </head>
 <header>Weather On-Demand</header>
@@ -12,17 +13,17 @@
   <h3 class="card-header text-uppercase">Please Enter a City's Name</h3>
   <form id="user-form" class="card-body">
     <label class="form-label" for="weatherfinder">Weather Forecast</label>
-    <input name="weatherfinder" id="weatherforcast" type="text" autofocus="true" class="form-input" />
+    <input name="weatherfinder" id="citySearch" type="text" autofocus="true" class="form-input" />
     <button type="submit" class="btn">Get My Forecast</button>
   </form>
 
 <div class="col-12 col-md-8">
-  <h2 class="output">Forcasts in your Area is: <span id="city-search"></span></h2>
+  <h2 class="output">The forcast in your Area is: <span id="city-search"></span></h2>
   <div id="weathresults" class="list-group"></div>
 </div>
  
 </section>
 
-    
+<script src= "assets/script.js"></script>    
 </body>
 </html>
