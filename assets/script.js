@@ -6,6 +6,16 @@ const searchInputEl = document.querySelector('#citySearch')
 //added submit button function to ccapture input
 const submitButton  =function (e){
     e.preventDefault()
+
+    var cityName = searchInputEl.value.trim();
+
+    if(cityName) {
+        weatherByCity(cityName);
+        searchInputEl.value= " ";
+    }else {
+        alert('Please enter City Name');
+    }
+
     console.log(e)
 }
 
