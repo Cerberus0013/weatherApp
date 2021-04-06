@@ -6,15 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather On-Demnd</title>
 </head>
-<header>Weather></header>
+<header>Weather On-Demand</header>
 <body>
 <section class="card">
-  <h3 class="card-header text-uppercase">Search by City</h3>
+  <h3 class="card-header text-uppercase">Please Enter a City's Name</h3>
   <form id="user-form" class="card-body">
-    <label class="form-label" for="weatherfinder">Wether Forecast</label>
+    <label class="form-label" for="weatherfinder">Weather Forecast</label>
     <input name="weatherfinder" id="weatherforcast" type="text" autofocus="true" class="form-input" />
     <button type="submit" class="btn">Get My Forecast</button>
   </form>
+
+<div class="col-12 col-md-8">
+  <h2 class="output">Forcasts in your Area is: <span id="city-search"></span></h2>
+  <div id="weathresults" class="list-group"></div>
+</div>
+ 
 </section>
 
     
