@@ -4,19 +4,21 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
     <link rel="stylesheet" href="./assets/style.css" />
     <title>Weather On-Demnd</title>
   </head>
   <header>Weather On-Demand</header>
   <body>
-    <main class="flex-flow justify-space-between">
-      <section class="col-12 col-md-8">
-        <div class="card">
-          <h3 class="card-header text-uppercase">Please Enter a City's Name</h3>
+    <main>
+      <section class= "container-fluid">
+        <div class="card col-12 col-md-3">
+          <h3 class="card-header">Enter a City's Name for the Current and Forecasted Weather</h3>
           <form id="user-form" class="card-body">
-            <label class="form-label" for="weatherfinder"
-              >Weather Forecast</label
-            >
+            <label class="form-label" for="weatherfinder">Weather Forecast</label>
             <input
               name="weatherfinder"
               id="citySearch"
@@ -24,21 +26,28 @@
               autofocus="true"
               class="form-input"
             />
-            <button type="submit" class="btn">Get My Forecast</button>
+            <button type="submit" class="btn">Get Todays Weather</button>
           </form>
         </div>
+      </div>
+    </section>
+    <section class=" row">
+      <div class="col-6 col-md-8">
+        <h2 class="output">
+          The Current Weather in  <span id="city-search"></span>
+        </h2>
+        <div id="weatherResults" class="list-group"></div>
+       </div>
+    </section>
 
-        <div class="col-12 col-md-8">
-          <h2 class="output">
-            The Forecast in your Area is: <span id="city-search"></span>
-          </h2>
-          <div id="weatherResults" class="list-group">
 
-          
-
-          </div>
-        </div>
-      </section>
+      <section class="row">
+        <div class="col-6 col-md-8">
+        <h2 class="five-day">
+          Your 5 day Forecast is: <span id="city-search"></span>
+        </h2>
+        <div id="five-day-forecast" class="list-group"></div>
+        </section>
     </main>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="assets/script.js"></script>

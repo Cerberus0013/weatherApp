@@ -4,6 +4,7 @@ const fromEl = document.querySelector('#user-form')
 const searchInputEl = document.querySelector('#citySearch')
 const  resultContainer = document.querySelector('#weatherResults')
 const  searchTermEl  = document.querySelector('#city-search')
+const fiveDayContainer= document.querySelector('#five-day-forecast')
 
 let today = moment();
 //added submit button function to ccapture input
@@ -27,7 +28,7 @@ fromEl.addEventListener("submit", submitButton)
 
 const weatherByCity = function (searchInput) {
 
-let weatherApi =  "https://api.openweathermap.org/data/2.5/weather?q=" + searchInput + "&APPID=d1a98a17848dd5228d6e0d33fd081195"
+let weatherApi =  "https://api.openweathermap.org/data/2.5/weather?q=" + searchInput + "&APPID=d1a98a17848dd5228d6e0d33fd081195&units=imperial"
 
 fetch(weatherApi).then(function (response) {
     //console.log(response);
@@ -43,23 +44,25 @@ var displayWeather = function (data, searchInput) {
   resultContainer.textContent = " ";
   searchTermEl.textContent = searchInput
 
-let weather = document.createElement('h1')
+let weather = document.createElement('div')
 
 let icon = ("<img src='http://openweathermap.org/img/wn/" + data.weather[0].icon + ".png'>");;
 
-weather.innerHTML = `<div class= "dashboard" > 
+weather.innerHTML = `
+                <div class= "rows">    
+                    <div class= "col-7  weather-card" > 
                         <h1> ${data.name} (${today.format("MMM Do YY")})  </h1>
-                        <p> General Description: ${
-                          data.weather[0].description
-                        }</p>
-                        <p> Tempature: ${data.main.temp} </p>
+                        <p> General Description: ${data.weather[0].description} ${icon} </p>
+                        <p> Tempature: ${data.main.temp} °F </p>
                         <p> Wind Speed:  ${data.wind.speed} MPH</p>
                         <p> Humidity:  ${data.main.humidity}% </p>
-                        <p> ${icon}</p>
-                    </div>`;
+                   
+                    </div>
+                </div>`;
  resultContainer.appendChild(weather) 
-
 };
+
+
 
 
 //weatherByCity("Phoenix");
