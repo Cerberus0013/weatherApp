@@ -45,15 +45,17 @@ var displayWeather = function (data, searchInput) {
 
 let weather = document.createElement('h1')
 
-const  icon = data.weather[0].icon;
+let icon = ("<img src='http://openweathermap.org/img/wn/" + data.weather[0].icon + ".png'>");;
 
 weather.innerHTML = `<div class= "dashboard" > 
                         <h1> ${data.name} (${today.format("MMM Do YY")})  </h1>
-                        <p> General Description: ${data.weather[0].description}</p>
+                        <p> General Description: ${
+                          data.weather[0].description
+                        }</p>
                         <p> Tempature: ${data.main.temp} </p>
                         <p> Wind Speed:  ${data.wind.speed} MPH</p>
                         <p> Humidity:  ${data.main.humidity}% </p>
-                        <img src="icons/${icon}.png">
+                        <p> ${icon}</p>
                     </div>`;
  resultContainer.appendChild(weather) 
 
